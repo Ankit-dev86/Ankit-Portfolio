@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ankit Kumar Pal — Cybersecurity professional portfolio. Ethical hacker, penetration tester, and security researcher." />
+  <meta name="keywords"
+    content="cybersecurity, ethical hacking, penetration testing, security researcher, Ankit Kumar Pal" />
+  <meta property="og:title" content="Ankit Kumar Pal | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Ethical hacker, penetration tester, and security researcher." />
+  <title>Ankit Kumar Pal | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Particle canvas background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Scan line overlay -->
+  <div class="scanline"></div>
+
+  <!-- ========= NAVBAR ========= -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">[</span>
+      <span class="brand-text">AKP<span class="brand-cursor">_</span></span>
+      <span class="brand-bracket">]</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      <li><a href="#blog" class="nav-link">Blog</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========= HERO ========= -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span class="tag-text">Available for work</span>
+      </div>
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">root@ankitkumarpal:~#</span>
+        </div>
+        <div class="terminal-body">
+          <p class="t-line"><span class="t-cmd">whoami</span></p>
+          <p class="t-output">ankit_kumar_pal</p>
+          <p class="t-line"><span class="t-cmd">cat /etc/role.txt</span></p>
+          <p class="t-output">Cybersecurity Specialist | Ethical Hacker | Pen Tester</p>
+          <p class="t-line"><span class="t-cmd">status --security</span></p>
+          <p class="t-output typing-output">System Secured. <span class="cursor-blink">█</span></p>
+        </div>
+      </div>
+      <h1 class="hero-name">Ankit Kumar <span class="glow-text">Pal</span></h1>
+      <p class="hero-subtitle">Cybersecurity Specialist <span class="sep">|</span> Ethical Hacker <span
+          class="sep">|</span> Security Researcher</p>
+      <p class="hero-desc">Protecting digital frontiers through offensive security, threat intelligence, and
+        cutting-edge penetration testing methodologies.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+          <span>View Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <div class="shield-container">
+        <div class="shield-ring ring-1"></div>
+        <div class="shield-ring ring-2"></div>
+        <div class="shield-ring ring-3"></div>
+        <div class="shield-core">
+          <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========= ABOUT ========= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Who Am <span class="glow-text">I</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-img-frame">
+            <img class="about-photo" src="profile-photo.jpeg" alt="Ankit Kumar Pal" />
+            <div class="img-corner tl"></div>
+            <div class="img-corner tr"></div>
+            <div class="img-corner bl"></div>
+            <div class="img-corner br"></div>
+          </div>
+          <div class="about-badges">
+            <div class="badge" id="badge-cybersecurity"><span class="badge-icon">🛡️</span> Cybersecurity Learner</div>
+            <div class="badge" id="badge-pentest"><span class="badge-icon">🔐</span> Penetration Testing</div>
+            <div class="badge" id="badge-ctf"><span class="badge-icon">🏆</span> CTF Enthusiast</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-text">Hello! I'm <strong>Ankit Kumar Pal</strong>, a passionate cybersecurity professional
+            dedicated to making the digital world safer. I specialize in <span class="highlight">ethical hacking</span>,
+            <span class="highlight">penetration testing</span>, and <span class="highlight">vulnerability
+              research</span>.</p>
+          <p class="about-text">With a deep understanding of offensive and defensive security strategies, I help
+            organizations identify and fix critical vulnerabilities before malicious actors can exploit them. I believe
+            in learning continuously and staying ahead of evolving threats.</p>
+          <p class="about-text">When I'm not hunting bugs or competing in CTF challenges, I enjoy writing security
+            research articles and contributing to the open-source security community.</p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Name</span>
+              <span class="info-value">Ankit Kumar Pal</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Role</span>
+              <span class="info-value">Cybersecurity Specialist</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value">Available on request</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">India 🇮🇳</span>
+            </div>
+          </div>
+          <a href="resume.pdf" class="btn btn-primary" id="download-cv-btn" target="_blank" rel="noopener noreferrer">
+            <span>Download CV</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= SKILLS ========= -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Arsenal & <span class="glow-text">Expertise</span></h2>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">🔍</div>
+            <h3>Offensive Security</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">Penetration Testing</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:92%"></div>
+              </div><span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Web App Security</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div><span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Network Exploitation</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div><span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Social Engineering</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div><span class="skill-pct">78%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">🛡️</div>
+            <h3>Defensive Security</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">Threat Intelligence</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div><span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Incident Response</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:84%"></div>
+              </div><span class="skill-pct">84%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">SIEM / Log Analysis</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div><span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Malware Analysis</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div><span class="skill-pct">75%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">⚙️</div>
+            <h3>Tools & Languages</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">Python / Bash</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div><span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Metasploit / Burp</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:95%"></div>
+              </div><span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Wireshark / Nmap</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:92%"></div>
+              </div><span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Kali / Parrot Linux</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:96%"></div>
+              </div><span class="skill-pct">96%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">🎨</div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">React.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div><span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">HTML</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div><span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">CSS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div><span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Tailwind CSS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:82%"></div>
+              </div><span class="skill-pct">82%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">🧩</div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">Flask</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div><span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:84%"></div>
+              </div><span class="skill-pct">84%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">Express.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div><span class="skill-pct">80%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">🗄️</div>
+            <h3>Database</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:82%"></div>
+              </div><span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-item"><span class="skill-name">DBMS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div><span class="skill-pct">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-tags">
+        <span class="tech-tag">Nmap</span>
+        <span class="tech-tag">Metasploit</span>
+        <span class="tech-tag">Burp Suite</span>
+        <span class="tech-tag">Wireshark</span>
+        <span class="tech-tag">SQLMap</span>
+        <span class="tech-tag">Nikto</span>
+        <span class="tech-tag">Hydra</span>
+        <span class="tech-tag">John the Ripper</span>
+        <span class="tech-tag">Hashcat</span>
+        <span class="tech-tag">OWASP ZAP</span>
+        <span class="tech-tag">Cobalt Strike</span>
+        <span class="tech-tag">Ghidra</span>
+        <span class="tech-tag">IDA Pro</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Bash</span>
+        <span class="tech-tag">PowerShell</span>
+        <span class="tech-tag">Splunk</span>
+        <span class="tech-tag">ELK Stack</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PROJECTS ========= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured <span class="glow-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card featured-card" id="proj-1">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+            <span class="card-label">FEATURED</span>
+          </div>
+          <div class="project-icon">🔓</div>
+          <h3 class="project-title">AutoPwn Framework</h3>
+          <p class="project-desc">An automated penetration testing framework that orchestrates Nmap, Metasploit, and
+            custom exploits for rapid assessment of network targets. Reduced manual testing time by 60%.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Metasploit</span><span>Nmap</span><span>Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-1-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+            <a href="#" class="proj-link" id="proj-1-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+              </svg> Demo</a>
+          </div>
+        </div>
+        <div class="project-card" id="proj-2">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="project-icon">🕷️</div>
+          <h3 class="project-title">Web Vulnerability Scanner</h3>
+          <p class="project-desc">A comprehensive web application vulnerability scanner that detects SQLi, XSS, CSRF,
+            IDOR, and more with detailed remediation reports.</p>
+          <div class="project-tags">
+            <span>Python</span><span>OWASP</span><span>REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-2-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+            <a href="#" class="proj-link" id="proj-2-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+              </svg> Demo</a>
+          </div>
+        </div>
+        <div class="project-card" id="proj-3">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="project-icon">🔑</div>
+          <h3 class="project-title">Password Strength Checker</h3>
+          <p class="project-desc">A secure password analysis tool that evaluates length, character variety, common
+            patterns, and estimated cracking resistance with improvement suggestions.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>JavaScript</span><span>Cybersecurity</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-3-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+          </div>
+        </div>
+        <div class="project-card" id="proj-4">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="project-icon">📡</div>
+          <h3 class="project-title">Network Traffic Analyzer</h3>
+          <p class="project-desc">Real-time network packet analysis tool with anomaly detection and intrusion signature
+            matching for enterprise environments.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Scapy</span><span>ML</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-4-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+          </div>
+        </div>
+        <div class="project-card" id="proj-5">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="project-icon">🩸</div>
+          <h3 class="project-title">Blood Donation Bank</h3>
+          <p class="project-desc">A blood bank management platform for registering donors, finding compatible blood
+            groups, tracking donations, and managing blood stock requests.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-5-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+          </div>
+        </div>
+        <div class="project-card" id="proj-6">
+          <div class="card-top-bar">
+            <div class="card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="project-icon">🌐</div>
+          <h3 class="project-title">Network Routing and Security Assessment</h3>
+          <p class="project-desc">Designed a multi-protocol network using RIP, OSPF, and EIGRP with route redistribution
+            in Cisco Packet Tracer. Tested routing behavior and connectivity, performed basic reconnaissance and
+            vulnerability assessment, and analyzed traffic with Wireshark.</p>
+          <div class="project-tags">
+            <span>Cisco Packet Tracer</span><span>RIP / OSPF / EIGRP</span><span>Wireshark</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" id="proj-6-github"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+              </svg> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= EXPERIENCE ========= -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Experience & <span class="glow-text">Training</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" id="exp-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Cybersecurity Intern / Trainee</h3>
+              <span class="timeline-date">Jun 2025 – Jul 2025</span>
+            </div>
+            <div class="timeline-company">Solitaire Infosys Pvt. Ltd.</div>
+            <ul class="timeline-points">
+              <li>Performed network security assessments and vulnerability analysis using Nmap, Wireshark, Burp Suite,
+                Metasploit, and Kali Linux</li>
+              <li>Analyzed network traffic and conducted basic security testing</li>
+              <li>Documented findings with clear remediation measures</li>
+            </ul>
+            <div class="timeline-tags"><span>Nmap</span><span>Wireshark</span><span>Burp
+                Suite</span><span>Metasploit</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" id="exp-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Cybersecurity Training</h3>
+              <span class="timeline-date">Jun 2026 – Jul 2026</span>
+            </div>
+            <div class="timeline-company">Novem Controls Pvt. Ltd.</div>
+            <ul class="timeline-points">
+              <li>Developed a real-time network sniffer to capture and analyze live traffic, including IP addresses,
+                protocols, packets, bandwidth, and top talkers</li>
+              <li>Implemented TCP/UDP analysis, suspicious activity detection, and port-scan detection</li>
+              <li>Built a dashboard for live monitoring and security alerts</li>
+            </ul>
+            <div class="timeline-tags"><span>Network Sniffing</span><span>TCP/UDP</span><span>Threat Detection</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" id="exp-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Independent Security Projects</h3>
+              <span class="timeline-date">2023 – Present</span>
+            </div>
+            <div class="timeline-company">Personal Portfolio · Open to Opportunities</div>
+            <ul class="timeline-points">
+              <li>Developed security-focused tools including a password strength checker and vulnerability utilities
+              </li>
+              <li>Automated repetitive security tasks using Python scripts and command-line tools</li>
+              <li>Continuously studied secure coding, threat analysis, incident response, and networking fundamentals
+              </li>
+            </ul>
+            <div class="timeline-tags"><span>Python</span><span>Security Tools</span><span>Automation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= EDUCATION ========= -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Education & <span class="glow-text">Certifications</span></h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card" id="edu-1">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-content">
+            <h3>B.Tech in Computer Science</h3>
+            <div class="edu-institute">CT University, Ludhiana</div>
+            <div class="edu-year">2023 – 2027</div>
+            <p class="edu-desc">Pursuing Computer Science with a focus on cybersecurity, networking, ethical hacking,
+              and secure application development.</p>
+          </div>
+        </div>
+        <div class="edu-card" id="edu-2">
+          <div class="edu-icon">🛡️</div>
+          <div class="edu-content">
+            <h3>Google Cybersecurity Certificate</h3>
+            <div class="edu-institute">Google · Coursera</div>
+            <div class="edu-year">Self-Paced</div>
+            <p class="edu-desc">Covers security risks, SIEM tools, incident response, network security, Python, and
+              Linux fundamentals.</p>
+          </div>
+        </div>
+        <div class="edu-card" id="edu-3">
+          <div class="edu-icon">💻</div>
+          <div class="edu-content">
+            <h3>Certified in Cybersecurity (CC)</h3>
+            <div class="edu-institute">ISC2</div>
+            <div class="edu-year">Self-Paced</div>
+            <p class="edu-desc">Entry-level cybersecurity certification covering security principles, network concepts,
+              access control, and risk management.</p>
+          </div>
+        </div>
+        <div class="edu-card" id="edu-4">
+          <div class="edu-icon">🔒</div>
+          <div class="edu-content">
+            <h3>CompTIA Security+</h3>
+            <div class="edu-institute">CompTIA · Learning Goal</div>
+            <div class="edu-year">Upcoming</div>
+            <p class="edu-desc">Industry-recognized certification covering threat detection, cryptography, identity,
+              governance, and network defense.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= TESTIMONIALS ========= -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What People <span class="glow-text">Say</span></h2>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">Ankit demonstrates a strong interest in cybersecurity and a consistent
+              willingness to learn new concepts through practical labs and independent study.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div class="author-info">
+                <strong>Academic Mentor</strong>
+                <span>CT University, Ludhiana</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">His projects show growing practical knowledge of networking, vulnerability
+              analysis, and security tools, with a clear focus on hands-on implementation.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PP</div>
+              <div class="author-info">
+                <strong>Project Perspective</strong>
+                <span>Cybersecurity Portfolio</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">Ankit is proactive in developing his technical foundation, from configuring
+              networks and analyzing traffic to documenting security observations and remediation steps.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">TL</div>
+              <div class="author-info">
+                <strong>Technical Learning</strong>
+                <span>Labs and Training</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">He communicates his learning goals clearly, welcomes constructive feedback, and
+              is motivated to grow into a dependable cybersecurity professional.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CP</div>
+              <div class="author-info">
+                <strong>Career Profile</strong>
+                <span>Cybersecurity Fresher</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="t-ctrl prev" id="t-prev" aria-label="Previous testimonial">&#8592;</button>
+          <div class="t-dots">
+            <span class="t-dot-item active" data-idx="0"></span>
+            <span class="t-dot-item" data-idx="1"></span>
+            <span class="t-dot-item" data-idx="2"></span>
+            <span class="t-dot-item" data-idx="3"></span>
+          </div>
+          <button class="t-ctrl next" id="t-next" aria-label="Next testimonial">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= BLOG ========= -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Security <span class="glow-text">Insights</span></h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card" id="blog-1">
+          <div class="blog-category">Web Security</div>
+          <h3 class="blog-title">Top 10 OWASP Vulnerabilities Explained with Real-World Examples</h3>
+          <p class="blog-excerpt">Diving deep into OWASP Top 10 with actual CVEs and exploitation techniques — plus how
+            to fix them before attackers strike.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Oct 20, 2026</span>
+            <span class="blog-read">8 min read</span>
+          </div>
+          <a href="#" class="blog-link" id="blog-1-link">Read More →</a>
+        </div>
+        <div class="blog-card" id="blog-2">
+          <div class="blog-category">CTF Writeup</div>
+          <h3 class="blog-title">How I Solved the Hardest Binary Exploitation Challenge at HackTheBox</h3>
+          <p class="blog-excerpt">A detailed walkthrough of a ROP chain exploit I developed to bypass NX and ASLR
+            protections in a 64-bit binary challenge.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Sep 15, 2026</span>
+            <span class="blog-read">12 min read</span>
+          </div>
+          <a href="#" class="blog-link" id="blog-2-link">Read More →</a>
+        </div>
+        <div class="blog-card" id="blog-3">
+          <div class="blog-category">Threat Intel</div>
+          <h3 class="blog-title">Analyzing a Live Ransomware Campaign: From Initial Access to Encryption</h3>
+          <p class="blog-excerpt">A forensic analysis of a Conti-based ransomware sample — dissecting its persistence
+            mechanisms, lateral movement, and encryption routines.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Aug 05, 2026</span>
+            <span class="blog-read">15 min read</span>
+          </div>
+          <a href="#" class="blog-link" id="blog-3-link">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CONTACT ========= -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In <span class="glow-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">Have a security concern? Need a penetration test? Or just want to collaborate on a
+            CTF? I'm always open to exciting opportunities.</p>
+          <div class="contact-links">
+            <a href="mailto:kumarankit20586@gmail.com" class="contact-item" id="contact-email">
+              <div class="contact-icon" aria-hidden="true">✉</div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">Send me a message</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ankit-kumar-b6112b28b" class="contact-item" id="contact-linkedin"
+              target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon" aria-hidden="true">in</div>
+              <div class="contact-detail">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Let’s connect professionally</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/Ankit-dev86/Github" class="contact-item" id="contact-github" target="_blank"
+              rel="noopener noreferrer">
+              <div class="contact-icon" aria-hidden="true">&lt;/&gt;</div>
+              <div class="contact-detail">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">Explore my projects</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-card">
+          <div class="cat-header">
+            <div class="cat-icon" aria-hidden="true">✉</div>
+            <h3>Request a Service</h3>
+          </div>
+          <p class="skill-request-copy">Tell me what you need, and I’ll get back to you by email.</p>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" maxlength="120" autocomplete="name"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" maxlength="254"
+                autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Request type</label>
+              <input type="text" id="subject" name="subject" placeholder="For example, website security assessment"
+                maxlength="200" />
+            </div>
+            <div class="form-group">
+              <div class="message-label-row">
+                <label for="message">Request details</label>
+                <span class="message-count" id="message-count">0 / 5000</span>
+              </div>
+              <textarea id="message" name="message" rows="3" maxlength="5000" placeholder="Describe what you need..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="contact-submit">
+              <span>Send Request</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-bracket">[</span><span class="brand-text">AKP<span
+              class="brand-cursor">_</span></span><span class="brand-bracket">]</span>
+          <p>Securing the digital world, one vulnerability at a time.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub" id="footer-github" class="social-btn">GH</a>
+          <a href="#" aria-label="LinkedIn" id="footer-linkedin" class="social-btn">LI</a>
+          <a href="#" aria-label="Twitter" id="footer-twitter" class="social-btn">TW</a>
+          <a href="#" aria-label="HackerOne" id="footer-hackerone" class="social-btn">H1</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ankit Kumar Pal · Built with ❤️ &amp; ☕ · <span class="glow-text">Stay Secure</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
